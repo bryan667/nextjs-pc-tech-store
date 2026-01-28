@@ -1,4 +1,4 @@
-import type { Product } from "@/components/products/types";
+import type { Product } from '@/components/products/types';
 
 export const products: Product[] = [
   // GPUs
@@ -9,15 +9,15 @@ export const products: Product[] = [
     category: 'gpu',
     price: 1599,
     originalPrice: 1799,
-    image: '/images/gpu-rtx4090.jpg',
+    image: '/images/gpu.jpg',
     specs: {
-      'VRAM': '24GB GDDR6X',
+      VRAM: '24GB GDDR6X',
       'Boost Clock': '2.52 GHz',
       'CUDA Cores': '16,384',
-      'TDP': '450W'
+      TDP: '450W',
     },
     inStock: true,
-    badge: 'Flagship'
+    badge: 'Flagship',
   },
   {
     id: 'rtx-4080',
@@ -25,15 +25,15 @@ export const products: Product[] = [
     brand: 'NVIDIA',
     category: 'gpu',
     price: 1199,
-    image: '/images/gpu-rtx4080.jpg',
+    image: '/images/gpu.jpg',
     specs: {
-      'VRAM': '16GB GDDR6X',
+      VRAM: '16GB GDDR6X',
       'Boost Clock': '2.51 GHz',
       'CUDA Cores': '9,728',
-      'TDP': '320W'
+      TDP: '320W',
     },
     inStock: true,
-    badge: 'Best Seller'
+    badge: 'Best Seller',
   },
   {
     id: 'rtx-4070-ti',
@@ -41,14 +41,14 @@ export const products: Product[] = [
     brand: 'NVIDIA',
     category: 'gpu',
     price: 799,
-    image: '/images/gpu-rtx4070.jpg',
+    image: '/images/gpu.jpg',
     specs: {
-      'VRAM': '12GB GDDR6X',
+      VRAM: '12GB GDDR6X',
       'Boost Clock': '2.61 GHz',
       'CUDA Cores': '7,680',
-      'TDP': '285W'
+      TDP: '285W',
     },
-    inStock: true
+    inStock: true,
   },
   {
     id: 'rtx-4070',
@@ -56,14 +56,14 @@ export const products: Product[] = [
     brand: 'NVIDIA',
     category: 'gpu',
     price: 599,
-    image: '/images/gpu-rtx4070.jpg',
+    image: '/images/gpu.jpg',
     specs: {
-      'VRAM': '12GB GDDR6X',
+      VRAM: '12GB GDDR6X',
       'Boost Clock': '2.48 GHz',
       'CUDA Cores': '5,888',
-      'TDP': '200W'
+      TDP: '200W',
     },
-    inStock: true
+    inStock: true,
   },
   {
     id: 'rx-7900-xtx',
@@ -72,15 +72,15 @@ export const products: Product[] = [
     category: 'gpu',
     price: 999,
     originalPrice: 1099,
-    image: '/images/gpu-rx7900.jpg',
+    image: '/images/gpu.jpg',
     specs: {
-      'VRAM': '24GB GDDR6',
+      VRAM: '24GB GDDR6',
       'Boost Clock': '2.5 GHz',
       'Stream Processors': '6,144',
-      'TDP': '355W'
+      TDP: '355W',
     },
     inStock: true,
-    badge: 'Hot Deal'
+    badge: 'Hot Deal',
   },
   {
     id: 'rx-7900-xt',
@@ -88,14 +88,14 @@ export const products: Product[] = [
     brand: 'AMD',
     category: 'gpu',
     price: 899,
-    image: '/images/gpu-rx7900.jpg',
+    image: '/images/gpu.jpg',
     specs: {
-      'VRAM': '20GB GDDR6',
+      VRAM: '20GB GDDR6',
       'Boost Clock': '2.4 GHz',
       'Stream Processors': '5,376',
-      'TDP': '315W'
+      TDP: '315W',
     },
-    inStock: true
+    inStock: true,
   },
   {
     id: 'rtx-4060-ti',
@@ -103,14 +103,14 @@ export const products: Product[] = [
     brand: 'NVIDIA',
     category: 'gpu',
     price: 399,
-    image: '/images/gpu-rtx4060.jpg',
+    image: '/images/gpu.jpg',
     specs: {
-      'VRAM': '8GB GDDR6',
+      VRAM: '8GB GDDR6',
       'Boost Clock': '2.54 GHz',
       'CUDA Cores': '4,352',
-      'TDP': '160W'
+      TDP: '160W',
     },
-    inStock: true
+    inStock: true,
   },
   {
     id: 'rx-7800-xt',
@@ -118,16 +118,16 @@ export const products: Product[] = [
     brand: 'AMD',
     category: 'gpu',
     price: 499,
-    image: '/images/gpu-rx7800.jpg',
+    image: '/images/gpu.jpg',
     specs: {
-      'VRAM': '16GB GDDR6',
+      VRAM: '16GB GDDR6',
       'Boost Clock': '2.43 GHz',
       'Stream Processors': '3,840',
-      'TDP': '263W'
+      TDP: '263W',
     },
-    inStock: true
+    inStock: true,
   },
-  
+
   // RAM
   {
     id: 'ddr5-6000-corsair',
@@ -136,15 +136,15 @@ export const products: Product[] = [
     category: 'ram',
     price: 189,
     originalPrice: 229,
-    image: '/images/ram-corsair.jpg',
+    image: '/images/ram.jpg',
     specs: {
-      'Capacity': '32GB (2x16GB)',
-      'Speed': '6000MHz',
+      Capacity: '32GB (2x16GB)',
+      Speed: '6000MHz',
       'CAS Latency': 'CL36',
-      'Voltage': '1.35V'
+      Voltage: '1.35V',
     },
     inStock: true,
-    badge: 'Best Seller'
+    badge: 'Best Seller',
   },
   {
     id: 'ddr5-6400-gskill',
@@ -152,15 +152,15 @@ export const products: Product[] = [
     brand: 'G.Skill',
     category: 'ram',
     price: 249,
-    image: '/images/ram-gskill.jpg',
+    image: '/images/ram.jpg',
     specs: {
-      'Capacity': '32GB (2x16GB)',
-      'Speed': '6400MHz',
+      Capacity: '32GB (2x16GB)',
+      Speed: '6400MHz',
       'CAS Latency': 'CL32',
-      'Voltage': '1.40V'
+      Voltage: '1.40V',
     },
     inStock: true,
-    badge: 'High Performance'
+    badge: 'High Performance',
   },
   {
     id: 'ddr5-7200-gskill',
@@ -168,32 +168,32 @@ export const products: Product[] = [
     brand: 'G.Skill',
     category: 'ram',
     price: 399,
-    image: '/images/ram-gskill.jpg',
+    image: '/images/ram.jpg',
     specs: {
-      'Capacity': '32GB (2x16GB)',
-      'Speed': '7200MHz',
+      Capacity: '32GB (2x16GB)',
+      Speed: '7200MHz',
       'CAS Latency': 'CL34',
-      'Voltage': '1.45V'
+      Voltage: '1.45V',
     },
     inStock: true,
-    badge: 'Extreme Speed'
+    badge: 'Extreme Speed',
   },
   {
-    id: 'ddr4-3600-corsair',
-    name: 'Vengeance RGB Pro DDR4 3600MHz',
-    brand: 'Corsair',
-    category: 'ram',
-    price: 99,
-    originalPrice: 129,
-    image: '/images/ram-corsair.jpg',
+    id: 'macbook-pro-m7',
+    name: 'MacBook Pro M7',
+    brand: 'Mac',
+    category: 'laptop',
+    price: 7000,
+    originalPrice: 8000,
+    image: '/images/laptop.jpg',
     specs: {
-      'Capacity': '32GB (2x16GB)',
-      'Speed': '3600MHz',
-      'CAS Latency': 'CL18',
-      'Voltage': '1.35V'
+      Capacity: '192GB (6x32GB)',
+      CPU: '14 Core',
+      'Boost Clock': '3.7 GHz',
+      Storage: '50TB SSD',
     },
     inStock: true,
-    badge: 'Value Pick'
+    badge: 'Value Pick',
   },
   {
     id: 'ddr5-5600-kingston',
@@ -201,30 +201,31 @@ export const products: Product[] = [
     brand: 'Kingston',
     category: 'ram',
     price: 149,
-    image: '/images/ram-kingston.jpg',
+    image: '/images/ram.jpg',
     specs: {
-      'Capacity': '32GB (2x16GB)',
-      'Speed': '5600MHz',
+      Capacity: '32GB (2x16GB)',
+      Speed: '5600MHz',
       'CAS Latency': 'CL40',
-      'Voltage': '1.25V'
-    },
-    inStock: true
-  },
-  {
-    id: 'ddr5-6000-64gb',
-    name: 'Vengeance DDR5 6000MHz',
-    brand: 'Corsair',
-    category: 'ram',
-    price: 349,
-    image: '/images/ram-corsair.jpg',
-    specs: {
-      'Capacity': '64GB (2x32GB)',
-      'Speed': '6000MHz',
-      'CAS Latency': 'CL36',
-      'Voltage': '1.35V'
+      Voltage: '1.25V',
     },
     inStock: true,
-    badge: 'Content Creator'
+  },
+  {
+    id: 'macbook-pro-m8',
+    name: 'MacBook Pro M8',
+    brand: 'Mac',
+    category: 'laptop',
+    price: 14000,
+    originalPrice: 16000,
+    image: '/images/laptop.jpg',
+    specs: {
+      Capacity: '320GB (10x32GB)',
+      CPU: '20 Core',
+      'Boost Clock': '4.3 GHz',
+      Storage: '200TB SSD',
+    },
+    inStock: true,
+    badge: 'Value Pick',
   },
   {
     id: 'ddr4-3200-kingston',
@@ -232,14 +233,14 @@ export const products: Product[] = [
     brand: 'Kingston',
     category: 'ram',
     price: 69,
-    image: '/images/ram-kingston.jpg',
+    image: '/images/ram.jpg',
     specs: {
-      'Capacity': '16GB (2x8GB)',
-      'Speed': '3200MHz',
+      Capacity: '16GB (2x8GB)',
+      Speed: '3200MHz',
       'CAS Latency': 'CL16',
-      'Voltage': '1.35V'
+      Voltage: '1.35V',
     },
-    inStock: true
+    inStock: true,
   },
   {
     id: 'ddr5-6800-gskill',
@@ -247,13 +248,13 @@ export const products: Product[] = [
     brand: 'G.Skill',
     category: 'ram',
     price: 299,
-    image: '/images/ram-gskill.jpg',
+    image: '/images/ram.jpg',
     specs: {
-      'Capacity': '32GB (2x16GB)',
-      'Speed': '6800MHz',
+      Capacity: '32GB (2x16GB)',
+      Speed: '6800MHz',
       'CAS Latency': 'CL34',
-      'Voltage': '1.40V'
+      Voltage: '1.40V',
     },
-    inStock: true
-  }
+    inStock: true,
+  },
 ];

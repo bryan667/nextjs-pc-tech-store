@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShoppingCart, Menu, X, Zap } from 'lucide-react';
@@ -6,8 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useCart } from '@/hooks/useCart';
 import { Cart } from '@/app/sections/Cart';
 
-interface NavigationProps {
-}
+interface NavigationProps {}
 
 export function Navigation({}: NavigationProps) {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -31,8 +30,7 @@ export function Navigation({}: NavigationProps) {
   ];
 
   return (
-    <>    
-      <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(!isCartOpen)} />
+    <>
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -55,7 +53,7 @@ export function Navigation({}: NavigationProps) {
                 <Zap className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-                TechVault
+                AGI Params
               </span>
             </motion.a>
 
@@ -77,7 +75,7 @@ export function Navigation({}: NavigationProps) {
             {/* Actions */}
             <div className="flex items-center gap-4">
               <motion.button
-                onClick={()=> setIsCartOpen(true)}
+                onClick={() => setIsCartOpen(!isCartOpen)}
                 className="relative p-2 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -97,9 +95,7 @@ export function Navigation({}: NavigationProps) {
                 </AnimatePresence>
               </motion.button>
 
-              <Button
-                className="hidden md:flex bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white border-0"
-              >
+              <Button className="hidden md:flex bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white border-0">
                 Contact Us
               </Button>
 
@@ -146,6 +142,7 @@ export function Navigation({}: NavigationProps) {
           )}
         </AnimatePresence>
       </motion.header>
+      <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(!isCartOpen)} />
     </>
   );
 }

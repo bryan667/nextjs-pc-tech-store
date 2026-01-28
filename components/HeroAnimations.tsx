@@ -16,7 +16,9 @@ export default function HeroAnimations() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 border border-zinc-800 mb-8"
           >
             <Sparkles className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm text-zinc-300">Premium PC Components</span>
+            <span className="text-sm text-zinc-300">
+              AGI Params Premium PC Components
+            </span>
           </motion.div>
 
           {/* Heading */}
@@ -39,7 +41,7 @@ export default function HeroAnimations() {
             className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10"
           >
             Discover cutting-edge GPUs and high-performance RAM for your
-            ultimate gaming and professional workstation builds.
+            ultimate gaming and professional workstation builds. AI powered!
           </motion.p>
 
           {/* CTA Buttons */}
@@ -76,10 +78,10 @@ export default function HeroAnimations() {
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { value: '50K+', label: 'Happy Customers' },
+              { value: '53K+', label: 'Happy Customers' },
               { value: '99%', label: 'Satisfaction Rate' },
               { value: '24h', label: 'Fast Shipping' },
-              { value: '2yr', label: 'Warranty' },
+              { value: '6yr', label: 'Warranty' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

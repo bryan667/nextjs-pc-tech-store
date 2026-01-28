@@ -8,7 +8,7 @@ const testimonials = [
     role: 'PC Enthusiast',
     avatar: 'AC',
     rating: 5,
-    text: 'Got my RTX 4090 within 2 days. The packaging was impeccable and the card runs flawlessly. TechVault is now my go-to for all PC components.',
+    text: 'Got my RTX 4090 within 2 days. The packaging was impeccable and the card runs flawlessly. AGI Params is now my go-to for all PC components.',
   },
   {
     name: 'Sarah Mitchell',
@@ -22,7 +22,7 @@ const testimonials = [
     role: 'Esports Player',
     avatar: 'MJ',
     rating: 5,
-    text: 'Competitive gaming requires the best hardware. TechVault delivered my 4070 Ti super fast. Zero issues, maximum FPS. Highly recommend!',
+    text: 'Competitive gaming requires the best hardware. AGI Params delivered my 4070 Ti super fast. Zero issues, maximum FPS. Highly recommend!',
   },
   {
     name: 'Emily Rodriguez',
@@ -43,7 +43,7 @@ const testimonials = [
     role: 'Streamer',
     avatar: 'LT',
     rating: 5,
-    text: 'My stream quality improved dramatically after upgrading through TechVault. The RGB RAM looks amazing on camera too!',
+    text: 'My stream quality improved dramatically after upgrading through AGI Params. The RGB RAM looks amazing on camera too!',
   },
 ];
 export default function TestimonialMotion() {

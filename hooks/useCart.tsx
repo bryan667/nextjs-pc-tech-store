@@ -1,5 +1,11 @@
-"use client";
-import React, { createContext, useContext, useState, useCallback, useMemo } from 'react';
+'use client';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useMemo,
+} from 'react';
 import type { CartContextType, CartItem } from '@/components/carts/types';
 import { products } from '@/data/products';
 
@@ -15,7 +21,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         return prev.map((item) =>
           item.productId === productId
             ? { ...item, quantity: item.quantity + 1 }
-            : item
+            : item,
         );
       }
       return [...prev, { productId, quantity: 1 }];
@@ -33,8 +39,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }
     setItems((prev) =>
       prev.map((item) =>
-        item.productId === productId ? { ...item, quantity } : item
-      )
+        item.productId === productId ? { ...item, quantity } : item,
+      ),
     );
   }, []);
 
@@ -44,7 +50,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const totalItems = useMemo(
     () => items.reduce((sum, item) => sum + item.quantity, 0),
-    [items]
+    [items],
   );
 
   const totalPrice = useMemo(
@@ -53,7 +59,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         const product = products.find((p) => p.id === item.productId);
         return sum + (product?.price || 0) * item.quantity;
       }, 0),
-    [items]
+    [items],
   );
 
   const value = useMemo(
@@ -66,7 +72,15 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       totalItems,
       totalPrice,
     }),
-    [items, addToCart, removeFromCart, updateQuantity, clearCart, totalItems, totalPrice]
+    [
+      items,
+      addToCart,
+      removeFromCart,
+      updateQuantity,
+      clearCart,
+      totalItems,
+      totalPrice,
+    ],
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

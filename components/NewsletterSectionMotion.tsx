@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
-export default function NewsletterSection() {
+export default function NewsletterSectionMotion() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <motion.div

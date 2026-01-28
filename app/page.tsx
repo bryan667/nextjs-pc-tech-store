@@ -9,17 +9,17 @@ import { Footer } from '@/app/sections/Footer';
 export const dynamic = 'force-static';
 export default function Home() {
   return (
-    <CartProvider>
-      <div className="min-h-screen bg-zinc-950 text-white">
-        <Navigation />
-        <main>
-          <Hero />
+    <div className="min-h-screen bg-zinc-950 text-white">
+      <main>
+        <Hero />
+        <CartProvider>
+          <Navigation />
           <ProductGrid />
-          <Features />
-          <Testimonials />
-        </main>
-        <Footer />
-      </div>
-    </CartProvider>
+        </CartProvider>
+        <Features />
+        <Testimonials />
+      </main>
+      <Footer />
+    </div>
   );
 }

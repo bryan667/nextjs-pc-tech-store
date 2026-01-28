@@ -8,7 +8,7 @@ import {
   Youtube,
   Github,
 } from 'lucide-react';
-import NewsletterSection from '@/components/NewsletterSection';
+import NewsletterSection from '@/components/NewsletterSectionMotion';
 
 const footerLinks = {
   products: [
@@ -59,32 +59,32 @@ export function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">TechVault</span>
+              <span className="text-xl font-bold text-white">AGI Params</span>
             </a>
             <p className="text-zinc-400 mb-6 max-w-sm">
               Your trusted source for premium PC components. Building dreams,
-              one rig at a time since 2020.
+              one rig at a time since 1997.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="mailto:support@techvault.com"
+                href="mailto:support@agiparams.com"
                 className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">support@techvault.com</span>
+                <span className="text-sm">support@agiparams.com</span>
               </a>
               <a
                 href="tel:+1-800-TECH-123"
                 className="flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span className="text-sm">1-800-TECH-123</span>
+                <span className="text-sm">0917-TECH-1234</span>
               </a>
               <div className="flex items-center gap-3 text-zinc-400">
                 <MapPin className="w-4 h-4" />
-                <span className="text-sm">San Francisco, CA</span>
+                <span className="text-sm">Imus Cavite, Calabarzon</span>
               </div>
             </div>
           </div>
@@ -161,7 +161,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-zinc-500">
-              © 2024 TechVault. All rights reserved.
+              © 2026 AGI Params. All rights reserved.
             </p>
 
             {/* Social Links */}
