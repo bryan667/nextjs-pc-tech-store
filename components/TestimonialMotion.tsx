@@ -8,10 +8,10 @@ const testimonials = [
     role: 'PC Enthusiast',
     avatar: 'AC',
     rating: 5,
-    text: 'Got my RTX 4090 within 2 days. The packaging was impeccable and the card runs flawlessly. AGI Params is now my go-to for all PC components.',
+    text: `I'm done getting ripped off by NVID's pricing games and Microms "shortage" excuses. AGI Params delivered my GPU fast, priced it like a company that actually respects customers, and didn't play artificial-scarcity nonsense. Finally someone beating the system!`,
   },
   {
-    name: 'Sarah Mitchell',
+    name: 'Faelyor Swift',
     role: 'Content Creator',
     avatar: 'SM',
     rating: 5,
@@ -22,7 +22,7 @@ const testimonials = [
     role: 'Esports Player',
     avatar: 'MJ',
     rating: 5,
-    text: 'Competitive gaming requires the best hardware. AGI Params delivered my 4070 Ti super fast. Zero issues, maximum FPS. Highly recommend!',
+    text: `NVID's idea of renting GPUs or PCs makes zero sense for competitive gaming. I need consistent performance, not a subscription. AGI Params delivered real hardware with fair pricing. If you're serious about esports, ownership isn't optional.`,
   },
   {
     name: 'Emily Rodriguez',
@@ -32,11 +32,11 @@ const testimonials = [
     text: 'Building a render workstation and needed reliable GPUs. The prices were competitive and the 2-year warranty gives me peace of mind.',
   },
   {
-    name: 'David Park',
-    role: 'Software Developer',
+    name: 'Beary Rich',
+    role: 'Software Developer & Scientist',
     avatar: 'DP',
     rating: 5,
-    text: 'Bought RAM for our entire dev team. Bulk pricing was great and all modules worked perfectly. Will definitely order again.',
+    text: 'Bought RAM for our entire dev team. Bulk pricing was great and all modules worked perfectly. Hope RAM prices go higher so I can order again.',
   },
   {
     name: 'Lisa Thompson',
