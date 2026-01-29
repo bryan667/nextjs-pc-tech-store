@@ -160,7 +160,7 @@ export function Footer() {
       <div className="border-t border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-zinc-500">
+            <p className="text-sm text-zinc-300">
               © 2026 AGI Params. All rights reserved.
             </p>
 

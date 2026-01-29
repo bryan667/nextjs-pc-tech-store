@@ -51,7 +51,7 @@ export function Navigation({}: NavigationProps) {
             >
               <div>
                 <img
-                  src="/images/agi-params-39.png"
+                  src="/images/agi-params-39.webp"
                   alt="agi-params-39"
                   className="w-39px h-33px"
                 />

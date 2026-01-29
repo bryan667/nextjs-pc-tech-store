@@ -19,7 +19,17 @@ export function Hero() {
           }}
         />
       </div>
-      <HeroAnimations />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="flex mt-4 mb-4 place-content-center">
+          <img
+            src="/images/agi-params-260.webp"
+            alt="agi-params-260"
+            className="w-260px h-220px place-self-center"
+            fetchPriority="high"
+          />
+        </div>
+        <HeroAnimations />
+      </div>
     </section>
   );
 }
