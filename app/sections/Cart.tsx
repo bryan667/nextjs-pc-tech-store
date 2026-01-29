@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Minus, Plus, ShoppingBag, Trash2, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/hooks/useCart';
-import { products } from '@/data/products';
+import { products } from '@/components/products/products-data';
 
 interface CartProps {
   isOpen: boolean;
@@ -10,7 +10,14 @@ interface CartProps {
 }
 
 export function Cart({ isOpen, onClose }: CartProps) {
-  const { items, removeFromCart, updateQuantity, totalItems, totalPrice, clearCart } = useCart();
+  const {
+    items,
+    removeFromCart,
+    updateQuantity,
+    totalItems,
+    totalPrice,
+    clearCart,
+  } = useCart();
 
   const cartProducts = items.map((item) => ({
     ...item,
@@ -45,7 +52,9 @@ export function Cart({ isOpen, onClose }: CartProps) {
                   <ShoppingBag className="w-5 h-5 text-emerald-400" />
                 </div>
                 <div>
-                  <h2 className="text-lg font-semibold text-white">Your Cart</h2>
+                  <h2 className="text-lg font-semibold text-white">
+                    Your Cart
+                  </h2>
                   <p className="text-sm text-zinc-500">{totalItems} item(s)</p>
                 </div>
               </div>
@@ -123,7 +132,9 @@ export function Cart({ isOpen, onClose }: CartProps) {
                           {/* Quantity Controls */}
                           <div className="flex items-center gap-2">
                             <button
-                              onClick={() => updateQuantity(product.id, quantity - 1)}
+                              onClick={() =>
+                                updateQuantity(product.id, quantity - 1)
+                              }
                               className="w-7 h-7 rounded-lg bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
                             >
                               <Minus className="w-3 h-3 text-zinc-400" />
@@ -132,7 +143,9 @@ export function Cart({ isOpen, onClose }: CartProps) {
                               {quantity}
                             </span>
                             <button
-                              onClick={() => updateQuantity(product.id, quantity + 1)}
+                              onClick={() =>
+                                updateQuantity(product.id, quantity + 1)
+                              }
                               className="w-7 h-7 rounded-lg bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
                             >
                               <Plus className="w-3 h-3 text-zinc-400" />
@@ -167,7 +180,9 @@ export function Cart({ isOpen, onClose }: CartProps) {
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zinc-500">Subtotal</span>
-                    <span className="text-zinc-300">${totalPrice.toFixed(2)}</span>
+                    <span className="text-zinc-300">
+                      ${totalPrice.toFixed(2)}
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zinc-500">Shipping</span>
@@ -182,9 +197,7 @@ export function Cart({ isOpen, onClose }: CartProps) {
                 </div>
 
                 {/* Checkout Button */}
-                <Button
-                  className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white border-0 py-6 text-lg rounded-xl group"
-                >
+                <Button className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white border-0 py-6 text-lg rounded-xl group">
                   Proceed to Checkout
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

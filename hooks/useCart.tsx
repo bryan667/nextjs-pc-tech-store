@@ -7,7 +7,7 @@ import React, {
   useMemo,
 } from 'react';
 import type { CartContextType, CartItem } from '@/components/carts/types';
-import { products } from '@/data/products';
+import { products } from '@/components/products/products-data';
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 

@@ -9,6 +9,13 @@ export default function HeroAnimations() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="text-center">
           {/* Badge */}
+          <div className="mt-4">
+            <img
+              src="/images/agi-params-260.png"
+              alt="agi-params-260"
+              className="w-260px h-220px place-self-center"
+            />
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

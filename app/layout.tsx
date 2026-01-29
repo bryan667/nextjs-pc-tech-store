@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'AGI Params Tech Store',
+  title: 'AGI Params Tech Shop',
   description: 'Get the best deal in the world!',
 };
 

@@ -49,8 +49,12 @@ export function Navigation({}: NavigationProps) {
               className="flex items-center gap-2"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+              <div>
+                <img
+                  src="/images/agi-params-39.png"
+                  alt="agi-params-39"
+                  className="w-39px h-33px"
+                />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
                 AGI Params
