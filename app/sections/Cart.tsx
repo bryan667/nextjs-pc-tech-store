@@ -205,7 +205,7 @@ export function Cart({ isOpen, onClose }: CartProps) {
                 <Button
                   variant="outline"
                   onClick={onClose}
-                  className="w-full border-zinc-700 text-zinc-400 hover:text-white hover:bg-zinc-900"
+                  className="w-full border-zinc-700 text-zinc-500 hover:text-white hover:bg-zinc-900"
                 >
                   Continue Shopping
                 </Button>

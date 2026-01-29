@@ -71,7 +71,7 @@ export default function HeroAnimations() {
             <Button
               size="lg"
               variant="outline"
-              className="border-zinc-700 text-zinc-300 hover:bg-zinc-900 hover:text-white px-8 py-6 text-lg rounded-xl"
+              className="border-zinc-700 text-zinc-500 hover:bg-zinc-900 hover:text-white px-8 py-6 text-lg rounded-xl"
             >
               View Deals
             </Button>

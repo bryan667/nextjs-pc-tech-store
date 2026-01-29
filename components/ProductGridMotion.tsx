@@ -61,12 +61,13 @@ export default function ProductGridMotion() {
           {categoryChoices.map((cat) => (
             <Button
               key={cat.value}
+              data-name={`${cat.value}-filter`}
               onClick={() => setCategory(cat.value)}
               variant={category === cat.value ? 'default' : 'outline'}
               className={`rounded-xl gap-2 ${
                 category === cat.value
                   ? 'bg-gradient-to-r from-emerald-500 to-cyan-500 text-white border-0'
-                  : 'border-zinc-700 text-zinc-400 hover:text-white hover:bg-zinc-900'
+                  : 'border-zinc-700 text-zinc-600 hover:text-white hover:bg-zinc-900'
               }`}
             >
               <cat.icon className="w-4 h-4" />
