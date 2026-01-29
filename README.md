@@ -1,4 +1,4 @@
-In days when hardware prices feel grim, AGI Params Tech Shop is here to save the day.
+When hardware prices feel grim, AGI Params is here to save the day.
 
 ## Vercel
 
