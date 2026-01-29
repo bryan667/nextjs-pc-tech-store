@@ -1,7 +1,6 @@
-import type { Product } from '@/components/products/types';
+import { Product } from './types';
 
 export const products: Product[] = [
-  // GPUs
   {
     id: 'rtx-4090',
     name: 'GeForce RTX 4090',
@@ -20,17 +19,17 @@ export const products: Product[] = [
     badge: 'Flagship',
   },
   {
-    id: 'rtx-4080',
-    name: 'GeForce RTX 4080',
+    id: 'rtx-4080-desktop',
+    name: 'Core™ i7-17700KF GeForce RTX 4080',
     brand: 'NVIDIA',
-    category: 'gpu',
-    price: 1199,
-    image: '/images/gpu.jpg',
+    category: 'desktop',
+    price: 5199,
+    image: '/images/desktop.jpg',
     specs: {
-      VRAM: '16GB GDDR6X',
-      'Boost Clock': '2.51 GHz',
+      RAM: '32GB GDDR6X',
+      'Boost Clock': '4.4 GHz',
       'CUDA Cores': '9,728',
-      TDP: '320W',
+      Storage: '50TB SSD',
     },
     inStock: true,
     badge: 'Best Seller',
@@ -98,19 +97,20 @@ export const products: Product[] = [
     inStock: true,
   },
   {
-    id: 'rtx-4060-ti',
-    name: 'GeForce RTX 4060 Ti',
+    id: 'rtx-5080-desktop',
+    name: 'Core™ i9-17800KF GeForce RTX 5080',
     brand: 'NVIDIA',
-    category: 'gpu',
-    price: 399,
-    image: '/images/gpu.jpg',
+    category: 'desktop',
+    price: 8199,
+    image: '/images/desktop.jpg',
     specs: {
-      VRAM: '8GB GDDR6',
-      'Boost Clock': '2.54 GHz',
-      'CUDA Cores': '4,352',
-      TDP: '160W',
+      RAM: '32GB GDDR6X',
+      'Boost Clock': '4.4 GHz',
+      'CUDA Cores': '9,728',
+      Storage: '50TB SSD',
     },
     inStock: true,
+    badge: 'Best Seller',
   },
   {
     id: 'rx-7800-xt',
@@ -127,8 +127,6 @@ export const products: Product[] = [
     },
     inStock: true,
   },
-
-  // RAM
   {
     id: 'ddr5-6000-corsair',
     name: 'Vengeance RGB DDR5 6000MHz',

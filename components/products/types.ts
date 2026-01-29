@@ -1,8 +1,16 @@
+import { allUniqueCategories } from './helpers';
 export interface Product {
   id: string;
   name: string;
   brand: string;
-  category: 'gpu' | 'ram' | 'laptop';
+  category:
+    | 'gpu'
+    | 'ram'
+    | 'laptop'
+    | 'desktop'
+    | 'cpu'
+    | 'monitor'
+    | 'storage';
   price: number;
   originalPrice?: number;
   image: string;
@@ -10,3 +18,6 @@ export interface Product {
   inStock: boolean;
   badge?: string;
 }
+
+export type SortOption = 'featured' | 'price-low' | 'price-high' | 'name';
+export type CategoryFilter = 'all' | (typeof allUniqueCategories)[number];

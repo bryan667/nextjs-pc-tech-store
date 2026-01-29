@@ -1,19 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ProductCard } from '@/components/products/ProductCard';
 import { Button } from '@/components/ui/button';
-import {
-  Laptop,
-  Gpu,
-  MemoryStick,
-  Filter,
-  Grid3X3,
-  LayoutList,
-} from 'lucide-react';
+import { Filter, Grid3X3, LayoutList } from 'lucide-react';
 import { useState } from 'react';
-import { products } from '@/data/products';
+import { products } from '@/components/products/products-data';
+import { categoryChoices } from './products/helpers';
+import { CategoryFilter, SortOption } from './products/types';
 
-type CategoryFilter = 'all' | 'gpu' | 'ram' | 'laptop';
-type SortOption = 'featured' | 'price-low' | 'price-high' | 'name';
 export default function ProductGridMotion() {
   const [category, setCategory] = useState<CategoryFilter>('all');
   const [sortBy, setSortBy] = useState<SortOption>('featured');
@@ -36,17 +29,6 @@ export default function ProductGridMotion() {
           return 0;
       }
     });
-
-  const categories: {
-    value: CategoryFilter;
-    label: string;
-    icon: React.ElementType;
-  }[] = [
-    { value: 'all', label: 'All Products', icon: Filter },
-    { value: 'gpu', label: 'Graphics Cards', icon: Gpu },
-    { value: 'ram', label: 'Memory', icon: MemoryStick },
-    { value: 'laptop', label: 'Laptops', icon: Laptop },
-  ];
 
   return (
     <>
@@ -76,7 +58,7 @@ export default function ProductGridMotion() {
       >
         {/* Category Tabs */}
         <div className="flex flex-wrap gap-2">
-          {categories.map((cat) => (
+          {categoryChoices.map((cat) => (
             <Button
               key={cat.value}
               onClick={() => setCategory(cat.value)}

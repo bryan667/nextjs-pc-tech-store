@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ShoppingCart, Check, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import type { Product } from '@/components/products/types';
+import { Product } from '@/components/products/types';
 import { useCart } from '@/hooks/useCart';
 import { CartItem } from '../carts/types';
 
