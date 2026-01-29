@@ -66,7 +66,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
               product.category === 'gpu' ? 'text-emerald-400' : 'text-cyan-400'
             }`}
           >
-            {product.category === 'gpu' ? 'Graphics Card' : 'Memory'}
+            {product.category}
           </span>
         </div>
 
