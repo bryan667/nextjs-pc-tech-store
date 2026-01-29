@@ -12,14 +12,16 @@ interface ProductCardProps {
 
 export function ProductCard({ product, index }: ProductCardProps) {
   const { addToCart, items } = useCart();
-  const isInCart = items.some((item: CartItem) => item.productId === product.id);
+  const isInCart = items.some(
+    (item: CartItem) => item.productId === product.id,
+  );
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.5, delay: index * 0.05 }}
       whileHover={{ y: -8 }}
       className="group relative bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-zinc-700 transition-all duration-300"
     >
@@ -59,9 +61,11 @@ export function ProductCard({ product, index }: ProductCardProps) {
           <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
             {product.brand}
           </span>
-          <span className={`text-xs font-medium uppercase tracking-wider ${
-            product.category === 'gpu' ? 'text-emerald-400' : 'text-cyan-400'
-          }`}>
+          <span
+            className={`text-xs font-medium uppercase tracking-wider ${
+              product.category === 'gpu' ? 'text-emerald-400' : 'text-cyan-400'
+            }`}
+          >
             {product.category === 'gpu' ? 'Graphics Card' : 'Memory'}
           </span>
         </div>
@@ -73,12 +77,14 @@ export function ProductCard({ product, index }: ProductCardProps) {
 
         {/* Specs */}
         <div className="grid grid-cols-2 gap-2 mb-4">
-          {Object.entries(product.specs).slice(0, 4).map(([key, value]) => (
-            <div key={key} className="text-xs">
-              <span className="text-zinc-500">{key}:</span>{' '}
-              <span className="text-zinc-300">{value}</span>
-            </div>
-          ))}
+          {Object.entries(product.specs)
+            .slice(0, 4)
+            .map(([key, value]) => (
+              <div key={key} className="text-xs">
+                <span className="text-zinc-500">{key}:</span>{' '}
+                <span className="text-zinc-300">{value}</span>
+              </div>
+            ))}
         </div>
 
         {/* Price & Action */}

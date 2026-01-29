@@ -6,46 +6,47 @@ const testimonials = [
   {
     name: 'Alex Chen',
     role: 'PC Enthusiast',
-    avatar: 'AC',
     rating: 5,
     text: `I'm done getting ripped off by NVID's pricing games and Microms "shortage" excuses. AGI Params delivered my GPU fast, priced it like a company that actually respects customers, and didn't play artificial-scarcity nonsense. Finally someone beating the system!`,
   },
   {
     name: 'Faelyor Swift',
     role: 'Content Creator',
-    avatar: 'SM',
     rating: 5,
     text: 'Upgraded my editing rig with 64GB of DDR5 RAM. The performance difference is night and day. Customer support helped me pick the perfect kit.',
   },
   {
     name: 'Marcus Johnson',
     role: 'Esports Player',
-    avatar: 'MJ',
     rating: 5,
     text: `NVID's idea of renting GPUs or PCs makes zero sense for competitive gaming. I need consistent performance, not a subscription. AGI Params delivered real hardware with fair pricing. If you're serious about esports, ownership isn't optional.`,
   },
   {
     name: 'Leon Kennedy',
     role: 'Federal Agent',
-    avatar: 'ER',
     rating: 4,
     text: 'Building a render workstation and needed reliable GPUs. The prices were competitive and the 6-year warranty gives me peace of mind.',
   },
   {
     name: 'Beary Rich',
     role: 'Software Developer & Scientist',
-    avatar: 'DP',
     rating: 5,
     text: 'Bought RAM for our entire dev team. Bulk pricing was great and all modules worked perfectly. Hope RAM prices go higher so I can order again.',
   },
   {
     name: 'Lisa Thompson',
     role: 'Streamer',
-    avatar: 'LT',
     rating: 5,
     text: 'My stream quality improved dramatically after upgrading through AGI Params. The RGB RAM looks amazing on camera too!',
   },
 ];
+
+const getNameInitials = (name: string) => {
+  const words = name.split(' ');
+  const initials = words.map((word) => word.charAt(0));
+  return initials.join('');
+};
+
 export default function TestimonialMotion() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -81,7 +82,7 @@ export default function TestimonialMotion() {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -5 }}
-            className="group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-300"
+            className="flex flex-col group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all duration-300"
           >
             {/* Quote Icon */}
             <div className="mb-4">
@@ -104,9 +105,9 @@ export default function TestimonialMotion() {
             </p>
 
             {/* Author */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mt-auto">
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-white font-semibold text-sm">
-                {testimonial.avatar}
+                {getNameInitials(testimonial.name)}
               </div>
               <div>
                 <div className="text-white font-medium">{testimonial.name}</div>

@@ -50,9 +50,8 @@ const features = [
   },
   {
     icon: Award,
-    title: 'Price Match',
-    description:
-      "Found it cheaper elsewhere? We'll match any verified competitor price.",
+    title: 'Best Prices',
+    description: 'No one can beat our prices. Nothing else comes close.',
     color: 'from-rose-500 to-rose-600',
   },
 ];
