@@ -25,11 +25,11 @@ const testimonials = [
     text: `NVID's idea of renting GPUs or PCs makes zero sense for competitive gaming. I need consistent performance, not a subscription. AGI Params delivered real hardware with fair pricing. If you're serious about esports, ownership isn't optional.`,
   },
   {
-    name: 'Emily Rodriguez',
-    role: '3D Artist',
+    name: 'Leon Kennedy',
+    role: 'Federal Agent',
     avatar: 'ER',
-    rating: 5,
-    text: 'Building a render workstation and needed reliable GPUs. The prices were competitive and the 2-year warranty gives me peace of mind.',
+    rating: 4,
+    text: 'Building a render workstation and needed reliable GPUs. The prices were competitive and the 6-year warranty gives me peace of mind.',
   },
   {
     name: 'Beary Rich',
@@ -64,8 +64,10 @@ export default function TestimonialMotion() {
           Trusted by Builders
         </h2>
         <p className="text-zinc-400 max-w-2xl mx-auto">
-          Don&apos;t just take our word for it. Here&apos;s what our community
-          of PC enthusiasts has to say about their experience.
+          Don't just take our word for it. In a world where owning your own
+          hardware feels impossible, our customers are fighting back. Here's
+          what our community of PC enthusiasts has to say about their
+          experience.
         </p>
       </motion.div>
 

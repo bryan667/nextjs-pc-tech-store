@@ -81,8 +81,8 @@ export default function FeaturesMotion() {
           Built for Performance
         </h2>
         <p className="text-zinc-400 max-w-2xl mx-auto">
-          We understand what enthusiasts need. That&apos;s why we go above and
-          beyond to deliver the best PC component shopping experience.
+          We understand what enthusiasts need. That's why we go above and beyond
+          to deliver the best PC component shopping experience.
         </p>
       </motion.div>
 
