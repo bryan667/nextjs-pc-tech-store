@@ -124,7 +124,7 @@ export default function HeroAnimations() {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute bottom-1/3 left-[10%] hidden lg:block"
+        className="absolute bottom-1/2 left-[10%] hidden lg:block"
       >
         <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-cyan-500/5 border border-cyan-500/20 flex items-center justify-center backdrop-blur-sm">
           <svg
