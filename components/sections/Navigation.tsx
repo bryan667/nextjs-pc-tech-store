@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ShoppingCart, Menu, X, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/hooks/useCart';
-import { Cart } from '@/app/sections/Cart';
+import { Cart } from './Cart';
 
 interface NavigationProps {}
 
