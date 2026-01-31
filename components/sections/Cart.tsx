@@ -98,7 +98,7 @@ export function Cart({ isOpen, onClose }: CartProps) {
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.05 }}
-                      className="flex gap-4 p-4 rounded-xl bg-zinc-900/50 border border-zinc-800"
+                      className="overflow-auto flex gap-4 p-4 rounded-xl bg-zinc-900/50 border border-zinc-800"
                     >
                       {/* Product Image */}
                       <div className="w-20 h-20 rounded-lg overflow-hidden bg-zinc-950 flex-shrink-0">

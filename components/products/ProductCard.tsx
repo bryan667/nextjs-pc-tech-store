@@ -29,7 +29,6 @@ export function ProductCard({ product, index }: ProductCardProps) {
       {product.badge && (
         <div className="absolute top-4 left-4 z-10">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 border border-emerald-500/30">
-            <Sparkles className="w-3 h-3" />
             {product.badge}
           </span>
         </div>

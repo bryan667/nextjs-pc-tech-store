@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import {
   Zap,
+  Computer,
   Shield,
   Truck,
   Headphones,
@@ -73,7 +74,7 @@ export default function FeaturesMotion() {
         className="text-center mb-16"
       >
         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 border border-zinc-800 text-sm text-zinc-400 mb-6">
-          <Zap className="w-4 h-4 text-emerald-400" />
+          <Computer className="w-4 h-4 text-emerald-400" />
           Why Choose Us
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">

@@ -14,7 +14,6 @@ export default function HeroAnimations() {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 border border-zinc-800 mb-8"
         >
-          <Sparkles className="w-4 h-4 text-emerald-400" />
           <span className="text-sm text-zinc-300">
             AGI Params Premium PC Components
           </span>

@@ -1,4 +1,4 @@
-import { allUniqueCategories } from './helpers';
+import { allUniqueCategories } from './product-helpers';
 export interface Product {
   id: string;
   name: string;

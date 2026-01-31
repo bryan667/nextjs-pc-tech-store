@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Filter, Grid3X3, LayoutList } from 'lucide-react';
 import { useState } from 'react';
 import { products } from '@/components/products/products-data';
-import { categoryChoices } from './products/helpers';
+import { categoryChoices } from './products/product-helpers';
 import { CategoryFilter, SortOption } from './products/types';
 
 export default function ProductGridMotion() {
