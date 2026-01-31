@@ -18,14 +18,18 @@ export async function POST(req: NextRequest) {
   const scopes = ['https://www.googleapis.com/auth/spreadsheets'];
 
   try {
-    const gpkey = process.env.GOOGLE_PRIVATE_KEY!;
+    const gpkey = Buffer.from(
+      process.env.GOOGLE_PRIVATE_KEY_BASE64!,
+      'base64',
+    ).toString('utf-8');
+
     if (!gpkey) {
       throw new Error('GP_KEY is not set');
     }
 
     const auth = new google.auth.JWT({
       email: process.env.GOOGLE_CLIENT_EMAIL,
-      key: gpkey.replace(/\\n/g, '\n'),
+      key: gpkey,
       scopes,
     });
 
