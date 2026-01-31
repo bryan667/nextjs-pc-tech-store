@@ -22,6 +22,7 @@ export async function POST(req: NextRequest) {
     if (!gpkey) {
       throw new Error('GP_KEY is not set');
     }
+
     const auth = new google.auth.JWT({
       email: process.env.GOOGLE_CLIENT_EMAIL,
       key: gpkey.replace(/\\n/g, '\n'),
@@ -39,9 +40,12 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    NextResponse.json({ ok: true }, { status: 200 });
+    return NextResponse.json({ ok: true }, { status: 200 });
   } catch (err) {
     console.error(err);
-    NextResponse.json({ error: 'Failed to save email' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to save email' },
+      { status: 500 },
+    );
   }
 }

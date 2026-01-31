@@ -10,6 +10,16 @@ export default function NewsletterSectionMotion() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
+
+    try {
+      fetch('/api/subscribe-email', {
+        method: 'POST',
+        body: JSON.stringify({ email, url: window.location.href }),
+      });
+    } catch (err) {
+      console.log('err', err);
+    }
+
     setSubmitted(true);
     setEmail('');
   };
