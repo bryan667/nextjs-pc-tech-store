@@ -19,9 +19,13 @@ export function Cart({ isOpen, onClose }: CartProps) {
     clearCart,
   } = useCart();
 
+  const productMap = Object.fromEntries(
+    products.map((product) => [product.id, product]),
+  );
+
   const cartProducts = Object.values(items).map((item) => ({
     ...item,
-    product: products.find((p) => p.id === item.productId)!,
+    product: productMap[item.productId]!,
   }));
 
   return (

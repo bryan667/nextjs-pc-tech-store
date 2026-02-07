@@ -32,8 +32,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       if (!prev[productId]) {
         return prev;
       }
-      const { [productId]: _removed, ...rest } = prev;
-      return rest;
+      const newDataMap = { ...prev };
+      delete newDataMap[productId];
+      return newDataMap;
     });
   }, []);
 
@@ -43,8 +44,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         if (!prev[productId]) {
           return prev;
         }
-        const { [productId]: _removed, ...rest } = prev;
-        return rest;
+        const newDataMap = { ...prev };
+        delete newDataMap[productId];
+        return newDataMap;
       });
       return;
     }
