@@ -6,56 +6,66 @@ import React, {
   useCallback,
   useMemo,
 } from 'react';
-import type { CartContextType, CartItem } from '@/components/carts/types';
+import type { CartContextType, CartItemsMap } from '@/components/carts/types';
 import { products } from '@/components/products/products-data';
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>([]);
+  const [items, setItems] = useState<CartItemsMap>({});
 
   const addToCart = useCallback((productId: string) => {
     setItems((prev) => {
-      const existing = prev.find((item) => item.productId === productId);
+      const existing = prev[productId];
       if (existing) {
-        return prev.map((item) =>
-          item.productId === productId
-            ? { ...item, quantity: item.quantity + 1 }
-            : item,
-        );
+        return {
+          ...prev,
+          [productId]: { ...existing, quantity: existing.quantity + 1 },
+        };
       }
-      return [...prev, { productId, quantity: 1 }];
+      return { ...prev, [productId]: { productId, quantity: 1 } };
     });
   }, []);
 
   const removeFromCart = useCallback((productId: string) => {
-    setItems((prev) => prev.filter((item) => item.productId !== productId));
+    setItems((prev) => {
+      if (!prev[productId]) {
+        return prev;
+      }
+      const { [productId]: _removed, ...rest } = prev;
+      return rest;
+    });
   }, []);
 
   const updateQuantity = useCallback((productId: string, quantity: number) => {
     if (quantity <= 0) {
-      setItems((prev) => prev.filter((item) => item.productId !== productId));
+      setItems((prev) => {
+        if (!prev[productId]) {
+          return prev;
+        }
+        const { [productId]: _removed, ...rest } = prev;
+        return rest;
+      });
       return;
     }
-    setItems((prev) =>
-      prev.map((item) =>
-        item.productId === productId ? { ...item, quantity } : item,
-      ),
-    );
+    setItems((prev) => ({
+      ...prev,
+      [productId]: { productId, quantity },
+    }));
   }, []);
 
   const clearCart = useCallback(() => {
-    setItems([]);
+    setItems({});
   }, []);
 
   const totalItems = useMemo(
-    () => items.reduce((sum, item) => sum + item.quantity, 0),
+    () => Object.values(items).reduce((sum, item) => sum + item.quantity, 0),
     [items],
   );
 
   const totalPrice = useMemo(
     () =>
-      items.reduce((sum, item) => {
+      Object.values(items).reduce((sum, item) => {
         const product = products.find((p) => p.id === item.productId);
         return sum + (product?.price || 0) * item.quantity;
       }, 0),

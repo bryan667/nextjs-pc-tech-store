@@ -19,7 +19,7 @@ export function Cart({ isOpen, onClose }: CartProps) {
     clearCart,
   } = useCart();
 
-  const cartProducts = items.map((item) => ({
+  const cartProducts = Object.values(items).map((item) => ({
     ...item,
     product: products.find((p) => p.id === item.productId)!,
   }));

@@ -3,7 +3,6 @@ import { ShoppingCart, Check, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Product } from '@/components/products/types';
 import { useCart } from '@/hooks/useCart';
-import { CartItem } from '../carts/types';
 
 interface ProductCardProps {
   product: Product;
@@ -12,9 +11,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product, index }: ProductCardProps) {
   const { addToCart, items } = useCart();
-  const isInCart = items.some(
-    (item: CartItem) => item.productId === product.id,
-  );
+  const isInCart = Boolean(items[product.id]);
 
   return (
     <motion.div

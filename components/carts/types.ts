@@ -3,8 +3,10 @@ export interface CartItem {
   quantity: number;
 }
 
+export type CartItemsMap = Record<string, CartItem>;
+
 export interface CartContextType {
-  items: CartItem[];
+  items: CartItemsMap;
   addToCart: (productId: string) => void;
   removeFromCart: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
