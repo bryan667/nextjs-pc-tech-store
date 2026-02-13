@@ -1,5 +1,6 @@
-const RATE_LIMIT = Number(process.env.RATE_LIMIT) || 10;
-const RATE_WINDOW_MS = Number(process.env.RATE_WINDOW_MS) || 60 * 1000;
+import { config } from './config';
+const RATE_LIMIT = Number(config.rateLimit) || 10;
+const RATE_WINDOW_MS = Number(config.rateWindowMs) || 60 * 1000;
 
 const rateMap = new Map();
 export function isRateLimited(ip: string) {

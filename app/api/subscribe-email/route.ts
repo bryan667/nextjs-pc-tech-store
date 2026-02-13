@@ -1,6 +1,8 @@
 import { google } from 'googleapis';
 import { NextRequest, NextResponse } from 'next/server';
 import { isRateLimited } from '@/lib/helpers';
+import { config } from '@/lib/config';
+
 export async function POST(req: NextRequest) {
   const ip: string =
     req.headers.get('x-forwarded-for')?.split(',')[0] ?? 'unknown';
@@ -18,17 +20,14 @@ export async function POST(req: NextRequest) {
   const scopes = ['https://www.googleapis.com/auth/spreadsheets'];
 
   try {
-    const gpkey = Buffer.from(
-      process.env.GOOGLE_PRIVATE_KEY_BASE64!,
-      'base64',
-    ).toString('utf-8');
+    const gpkey = config.gpKey;
 
     if (!gpkey) {
       throw new Error('GP_KEY is not set');
     }
 
     const auth = new google.auth.JWT({
-      email: process.env.GOOGLE_CLIENT_EMAIL,
+      email: config.gClientEmail,
       key: gpkey,
       scopes,
     });
@@ -36,7 +35,7 @@ export async function POST(req: NextRequest) {
     const sheets = google.sheets({ version: 'v4', auth });
 
     await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      spreadsheetId: config.gSpreadsheetId,
       range: 'Sheet1!A:D',
       valueInputOption: 'RAW',
       requestBody: {
